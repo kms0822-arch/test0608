@@ -216,12 +216,6 @@ def create_light_venn(r, g, b, size=540):
     # 합성 영역 힌트 라벨 (작게)
     hint_style = dict(fontsize=9, ha='center', va='center', alpha=0.75,
                       fontweight='bold')
-    # R+G = Yellow (두 원 사이 아래쪽)
-    ax.text(cx, cy - int(offset * 0.35), 'Yellow',  color='#FFFF66', **hint_style)
-    # G+B = Cyan
-    ax.text(cx - int(offset * 0.45), cy + int(offset * 0.72), 'Cyan', color='#66FFFF', **hint_style)
-    # R+B = Magenta
-    ax.text(cx + int(offset * 0.45), cy + int(offset * 0.72), 'Magenta', color='#FF66FF', **hint_style)
     # Center = White / mixed
     ax.text(cx, cy + int(offset * 0.25), 'Mix', color='#FFFFFF', **hint_style)
 
