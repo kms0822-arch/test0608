@@ -4,3 +4,6 @@ matplotlib
 scipy
 Pillow
 scikit-learn
+yfinance>=0.2.38
+plotly>=5.20.0
+pandas>=2.0.0
