@@ -287,7 +287,7 @@ if chart_type == "정규화 수익률":
         ))
     fig.add_hline(y=0, line_dash="dot", line_color=TEXT_MUTED, line_width=1)
     fig.update_layout(**plotly_layout("시작점 기준 정규화 수익률 (%)", height=500))
-    fig.update_yaxis(ticksuffix="%")
+    fig.update_yaxes(ticksuffix="%")
     st.plotly_chart(fig, use_container_width=True)
 
 elif chart_type == "캔들스틱":
@@ -304,7 +304,7 @@ elif chart_type == "캔들스틱":
             name=tick,
         ))
         fig.update_layout(**plotly_layout(f"{TOP10[tick]['name']} 캔들스틱", height=500))
-        fig.update_xaxis(rangeslider_visible=False)
+        fig.update_xaxes(rangeslider_visible=False)
         st.plotly_chart(fig, use_container_width=True)
 
 else:  # 히트맵
@@ -350,7 +350,7 @@ with c1:
     ))
     fig2.add_vline(x=0, line_color=TEXT_MUTED, line_width=1)
     fig2.update_layout(**plotly_layout("", height=360))
-    fig2.update_xaxis(ticksuffix="%")
+    fig2.update_xaxes(ticksuffix="%")
     st.plotly_chart(fig2, use_container_width=True)
 
 with c2:
@@ -371,7 +371,7 @@ with c2:
             hovertemplate="<b>%{x}</b><br>시가총액: %{text}<extra></extra>",
         ))
         fig3.update_layout(**plotly_layout("단위: 조 달러 (Trillion $)", height=360))
-        fig3.update_yaxis(ticksuffix="T")
+        fig3.update_yaxes(ticksuffix="T")
         st.plotly_chart(fig3, use_container_width=True)
 
 # ── Detail Table ──────────────────────────────────────────────────────────────
